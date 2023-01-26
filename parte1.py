@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 
 from subprocess import call
+import sys
 import os 
 
 
 #Clonamos aplicacion
 #En algunas maquinas virtuales hay que instalar los comandos
-#call(['sudo', 'apt-get', 'update'])
-#call(['sudo', 'apt-get', 'install', 'git'])
-#call(['sudo', 'apt-get', 'install', 'python3-pip'])
+call(['sudo', 'apt-get', 'update'])
+call(['sudo', 'apt-get', 'install', 'git'])
+call(['sudo', 'apt-get', 'install', 'python3-pip'])
 call(['git', 'clone', 'https://github.com/CDPS-ETSIT/practica_creativa2.git']) 
 
 
@@ -21,18 +22,18 @@ os.environ['GROUP_NUMBER'] = '34'
 #Modificamos el fichero requirements.txt para quitar las versiones
 #de esta forma se guarda la máquina automaticamente
 #call(['cp', '-f', './practica_creativa2/bookinfo/src/productpage/requirements.txt', 'in.txt'])
-fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'r')
-with fin as file:
-	nuevo=file.read()
-fin.close()
-fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
-with fin as file:
-	nuevo=nuevo.replace('urllib3==1.26.5', 'urllib3')
-	nuevo=nuevo.replace('chardet==3.0.4', 'chardet')
-	nuevo=nuevo.replace('gevent==1.4.0', 'gevent')
-	nuevo=nuevo.replace('greenlet==0.4.15', 'greenlet')
-	fin.write(nuevo)
-fin.close()
+#fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'r')
+#with fin as file:
+#	nuevo=file.read()
+#fin.close()
+#fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
+#with fin as file:
+#	nuevo=nuevo.replace('urllib3==1.26.5', 'urllib3')
+#	nuevo=nuevo.replace('chardet==3.0.4', 'chardet')
+#	nuevo=nuevo.replace('gevent==1.4.0', 'gevent')
+#	nuevo=nuevo.replace('greenlet==0.4.15', 'greenlet')
+#	fin.write(nuevo)
+#fin.close()
 #call(['rm', '-f', 'in.txt'])
 
 #Instalamos requirements.txt
