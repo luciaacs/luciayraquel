@@ -12,14 +12,37 @@ import os
 call(['git', 'clone', 'https://github.com/CDPS-ETSIT/practica_creativa2.git']) 
 
 
-#Instalamos requirements.txt
+#Instalamos PIP
 call(['sudo', 'apt-get', 'install', '-y', 'python3-pip'])
-os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
-call(['pip3', 'install', '-r', 'requirements.txt'])
 
 #Variable del entorno group number
 os.environ['GROUP_NUMBER'] = '34'
 
+#Modificamos el fichero requirements.txt para quitar las versiones
+#de esta forma se guarda la máquina automaticamente
+call(['mv', '-f', './practica_creativa2/bookinfo/src/productpage/requirements.txt', 'in.py'])
+fin = open('in.py', 'r')
+fout = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
+for line in fin:
+	if 'urllib3==1.26.5' in line :
+		fout.write('urllib3')
+	elif 'chardet==3.0.4' in line :
+		fout.write('chardet')
+	elif 'gevent==1.4.0' in line :
+		fout.write('gevent')
+	elif 'greenlet==0.4.15' in line :
+		fout.write('greenlet')
+	else :
+		fout.write(line)
+fin.close()
+fout.close()
+call(['rm', '-f', 'in.py'])
+
+#Instalamos requirements.txt
+os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
+call(['pip3', 'install', '-r', 'requirements.txt'])
+
+#Modificamos productpage_monolith.py
 call(['mv', '-f', 'productpage_monolith.py', 'in.py'])
 fin = open('in.py', 'r')
 fout = open('productpage_monolith.py', 'w')
