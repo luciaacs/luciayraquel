@@ -13,7 +13,7 @@ call(['git', 'clone', 'https://github.com/CDPS-ETSIT/practica_creativa2.git'])
 
 
 #Instalamos PIP
-call(['sudo', 'apt-get', 'install', '-y', 'python3-pip'])
+#call(['sudo', 'apt-get', 'install', '-y', 'python3-pip'])
 
 #Variable del entorno group number
 os.environ['GROUP_NUMBER'] = '34'
