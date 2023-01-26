@@ -26,17 +26,12 @@ with fin as file:
 	nuevo=file.read()
 fin.close()
 fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
-for line in fin:
-	if 'urllib3==1.26.5' in line :
-		fin.write('urllib3')
-	elif 'chardet==3.0.4' in line :
-		fin.write('chardet')
-	elif 'gevent==1.4.0' in line :
-		fin.write('gevent')
-	elif 'greenlet==0.4.15' in line :
-		fin.write('greenlet')
-	else :
-		fin.write(line)
+with fin as file:
+	nuevo=nuevo.replace('urllib3==1.26.5', 'urllib3')
+	nuevo=nuevo.replace('chardet==3.0.4', 'chardet')
+	nuevo=nuevo.replace('gevent==1.4.0', 'gevent')
+	nuevo=nuevo.replace('greenlet==0.4.15', 'greenlet')
+	fin.write(nuevo)
 fin.close()
 #call(['rm', '-f', 'in.txt'])
 
