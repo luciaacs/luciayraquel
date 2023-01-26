@@ -45,27 +45,27 @@ os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
 call(['pip3', 'install', '-r', 'requirements.txt'])
 
 #Modificamos productpage_monolith.py
-call(['mv', '-f', 'productpage_monolith.py', 'in.py'])
-fin = open('in.py', 'r')
-fout = open('productpage_monolith.py', 'w')
-for line in fin:
+#call(['mv', '-f', 'productpage_monolith.py', 'in.py'])
+#fin = open('in.py', 'r')
+#fout = open('productpage_monolith.py', 'w')
+#for line in fin:
 	# Creamos variable igual que flood_factor
-	if 'flood_factor = 0 if (os.environ.get("FLOOD_FACTOR") is None) else int(os.environ.get("FLOOD_FACTOR"))' in line :
-		fout.write(line)
-		fout.write('numeroGrupo = 0 if (os.environ.get("GROUP_NUMBER") is None) else int(os.environ.get("GROUP_NUMBER"))'+ os.linesep)
-	elif "product = getProduct(product_id)" in line :
-		fout.write(line)
-		fout.write('    grupo = numeroGrupo') #definimos var
-		fout.write(os.linesep)
-	elif "\'productpage.html\'," in line :
-		fout.write(line)
-		fout.write('	grupo=grupo,')
-		fout.write(os.linesep)
-	else :
-		fout.write(line)
-fin.close()
-fout.close()
-call(['rm', '-f', 'in.py'])
+#	if 'flood_factor = 0 if (os.environ.get("FLOOD_FACTOR") is None) else int(os.environ.get("FLOOD_FACTOR"))' in line :
+#		fout.write(line)
+#		fout.write('numeroGrupo = 0 if (os.environ.get("GROUP_NUMBER") is None) else int(os.environ.get("GROUP_NUMBER"))'+ os.linesep)
+#	elif "product = getProduct(product_id)" in line :
+#		fout.write(line)
+#		fout.write('    grupo = numeroGrupo') #definimos var
+#		fout.write(os.linesep)
+#	elif "\'productpage.html\'," in line :
+#		fout.write(line)
+#		fout.write('	grupo=grupo,')
+#		fout.write(os.linesep)
+#	else :
+#		fout.write(line)
+#fin.close()
+#fout.close()
+#call(['rm', '-f', 'in.py'])
 
 
 #Titulo de la aplicación es el nombre del grupo (productpage.html)
