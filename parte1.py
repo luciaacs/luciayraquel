@@ -20,23 +20,23 @@ os.environ['GROUP_NUMBER'] = '34'
 
 #Modificamos el fichero requirements.txt para quitar las versiones
 #de esta forma se guarda la máquina automaticamente
-call(['mv', '-f', './practica_creativa2/bookinfo/src/productpage/requirements.txt', 'in.py'])
-fin = open('in.py', 'r')
-fout = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
-for line in fin:
-	if 'urllib3==1.26.5' in line :
-		fout.write('urllib3')
-	elif 'chardet==3.0.4' in line :
-		fout.write('chardet')
-	elif 'gevent==1.4.0' in line :
-		fout.write('gevent')
-	elif 'greenlet==0.4.15' in line :
-		fout.write('greenlet')
-	else :
-		fout.write(line)
-fin.close()
-fout.close()
-call(['rm', '-f', 'in.py'])
+#call(['mv', '-f', './practica_creativa2/bookinfo/src/productpage/requirements.txt', 'in.py'])
+#fin = open('in.py', 'r')
+#fout = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
+#for line in fin:
+#	if 'urllib3==1.26.5' in line :
+#		fout.write('urllib3')
+#	elif 'chardet==3.0.4' in line :
+#		fout.write('chardet')
+#	elif 'gevent==1.4.0' in line :
+#		fout.write('gevent')
+#	elif 'greenlet==0.4.15' in line :
+#		fout.write('greenlet')
+#	else :
+#		fout.write(line)
+#fin.close()
+#fout.close()
+#call(['rm', '-f', 'in.py'])
 
 #Instalamos requirements.txt
 os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
@@ -81,4 +81,6 @@ call(['rm', '-f', 'templates/in.html'])
 
 #Ejecutamos la aplicación en el puerto correspondiente
 call(['python3', 'productpage_monolith.py', '9080'])
+
+#sudo rm/rmdir -rf 
 
