@@ -26,15 +26,9 @@ os.environ['GROUP_NUMBER'] = '34'
 #with fin as file:
 #	nuevo=file.read()
 #fin.close()
-#fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
-#with fin as file:
-#	nuevo=nuevo.replace('urllib3==1.26.5', 'urllib3')
-#	nuevo=nuevo.replace('chardet==3.0.4', 'chardet')
-#	nuevo=nuevo.replace('gevent==1.4.0', 'gevent')
-#	nuevo=nuevo.replace('greenlet==0.4.15', 'greenlet')
-#	fin.write(nuevo)
-#fin.close()
-#call(['rm', '-f', 'in.txt'])
+fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
+fin.write(GitPython==3.1.26)
+fin.close()
 
 #Instalamos requirements.txt
 os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
