@@ -27,7 +27,7 @@ os.environ['GROUP_NUMBER'] = '34'
 #	nuevo=file.read()
 #fin.close()
 fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
-fin.write("GitPython=='3.1.26'")
+fin.write("GitPython=='3.1.30'")
 fin.close()
 
 #Instalamos requirements.txt
