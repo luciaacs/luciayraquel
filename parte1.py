@@ -72,7 +72,7 @@ fout.close()
 call(['rm', '-f', 'templates/in.html'])
 
 #Ejecutamos la aplicación en el puerto correspondiente
-call(['python3', 'productpage_monolith.py', '8090'])
+call(['python3', 'productpage_monolith.py', '8080'])
 
 #sudo rm/rmdir -rf 
 
