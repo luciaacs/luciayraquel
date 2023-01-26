@@ -22,8 +22,8 @@ os.environ['GROUP_NUMBER'] = '34'
 #de esta forma se guarda la máquina automaticamente
 #call(['cp', '-f', './practica_creativa2/bookinfo/src/productpage/requirements.txt', 'in.txt'])
 fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'r')
-	with fin as file:
-		nuevo=file.read()
+with fin as file:
+	nuevo=file.read()
 fin.close()
 fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
 for line in fin:
