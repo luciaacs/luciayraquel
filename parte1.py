@@ -20,23 +20,25 @@ os.environ['GROUP_NUMBER'] = '34'
 
 #Modificamos el fichero requirements.txt para quitar las versiones
 #de esta forma se guarda la máquina automaticamente
-call(['mv', '-f', './practica_creativa2/bookinfo/src/productpage/requirements.txt', 'in.txt'])
-fin = open('in.txt', 'r')
-fout = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
+#call(['cp', '-f', './practica_creativa2/bookinfo/src/productpage/requirements.txt', 'in.txt'])
+fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'r')
+	with fin as file:
+		nuevo=file.read()
+fin.close()
+fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
 for line in fin:
 	if 'urllib3==1.26.5' in line :
-		fout.write('urllib3')
+		fin.write('urllib3')
 	elif 'chardet==3.0.4' in line :
-		fout.write('chardet')
+		fin.write('chardet')
 	elif 'gevent==1.4.0' in line :
-		fout.write('gevent')
+		fin.write('gevent')
 	elif 'greenlet==0.4.15' in line :
-		fout.write('greenlet')
+		fin.write('greenlet')
 	else :
-		fout.write(line)
+		fin.write(line)
 fin.close()
-fout.close()
-call(['rm', '-f', 'in.txt'])
+#call(['rm', '-f', 'in.txt'])
 
 #Instalamos requirements.txt
 os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
