@@ -58,7 +58,7 @@ call(['pip3', 'install', '-r', 'requirements.txt'])
 #call(['rm', '-f', 'in.py'])
 
 
-#Titulo de la aplicación es el nombre del grupo (productpage.html)
+#Cambiamos el titulo de la aplicación por el nombre del grupo (en productpage.html)
 call(['mv', '-f', 'templates/productpage.html', 'templates/in.html'])
 fin = open('templates/in.html', 'r')
 fout = open('templates/productpage.html', 'w')
@@ -71,8 +71,9 @@ fin.close()
 fout.close()
 call(['rm', '-f', 'templates/in.html'])
 
-#Ejecutamos la aplicación en el puerto correspondiente
-call(['python3', 'productpage_monolith.py', '8080'])
+
+#Esta es solo la llamada al puerto correspondiente
+call(['python3', 'productpage_monolith.py', '9080'])
 
 #sudo rm/rmdir -rf 
 
