@@ -27,12 +27,13 @@ os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
 call(['pip3', 'install', '-r', 'requirements.txt'])
 
 #Titulo de la aplicación es el nombre del grupo (productpage.html)
+grupo=os.environ.get['GROUP_NUMBER']
 call(['mv', '-f', 'templates/productpage.html', 'templates/in.html'])
 fin = open('templates/in.html', 'r')
 fout = open('templates/productpage.html', 'w')
 for line in fin:
 	if "{% block title %}Simple Bookstore App{% endblock %}" in line :
-		fout.write("{% block title %}GRUPO: "+ os.environ.get['GROUP_NUMBER'] + "{% endblock %}")
+		fout.write("{% block title %}GRUPO: "+ grupo + "{% endblock %}")
 	else:
 		fout.write(line)
 fin.close()
