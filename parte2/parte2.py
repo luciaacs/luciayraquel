@@ -2,6 +2,7 @@
 from subprocess import call
 import sys
 import os
+import subprocess
 
 #Variable del entorno group number
 os.environ['GROUP_NUMBER'] = '34'
@@ -23,7 +24,7 @@ fin.close()
 
 #Instalamos requirements.txt
 os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
-call(['pip3', 'install', '-r', 'requirements.txt'])
+subprocess.run(['pip3', 'install', '-r', 'requirements.txt'])
 
 #Titulo de la aplicación es el nombre del grupo (productpage.html)
 call(['mv', '-f', 'templates/productpage.html', 'templates/in.html'])
