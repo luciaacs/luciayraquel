@@ -1,15 +1,20 @@
 FROM python:3.9.2
 
-ENV GROUP_NUMBER=$GROUP_NUMBER
+ENV GROUP_NUMBER 34
 
+RUN apt-get update
+RUN apt-get install git
+RUN apt-get install python3-pip
 RUN git clone 'https://github.com/CDPS-ETSIT/practica_creativa2.git'
 
-WORKDIR practica_creativa2/bookinfo/src/productpage
-RUN pip3 install requirements.txt
+#Dentro de parte2 instalamos requirements, modificamos productpage.html
+COPY parte2.py .
+RUN python3 script.py
 
 EXPOSE 9080
 
-CMD ["python3", "parte2.py"]
+WORKDIR practica_creativa2/bookinfo/src/productpage
+CMD python3 productpage_monolith.py 9080
 
 
 
