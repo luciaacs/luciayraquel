@@ -24,7 +24,7 @@ fin.close()
 
 #Instalamos requirements.txt
 os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
-subprocess.run(['pip3', 'install', '-r', 'requirements.txt'])
+call(['pip3', 'install', '-r', 'requirements.txt'])
 
 #Titulo de la aplicación es el nombre del grupo (productpage.html)
 call(['mv', '-f', 'templates/productpage.html', 'templates/in.html'])
