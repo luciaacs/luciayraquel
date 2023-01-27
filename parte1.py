@@ -37,7 +37,7 @@ fin = open('templates/in.html', 'r')
 fout = open('templates/productpage.html', 'w')
 for line in fin:
 	if "{% block title %}Simple Bookstore App{% endblock %}" in line :
-		fout.write('{% block title %}GRUPO: "os.environ['GROUP_NUMBER']"{% endblock %}')
+		fout.write("{% block title %}GRUPO: "+ os.environ['GROUP_NUMBER'] + "{% endblock %}")
 	else:
 		fout.write(line)
 fin.close()
