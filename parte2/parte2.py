@@ -28,5 +28,5 @@ fout.close()
 call(['rm', '-f', 'templates/in.html'])
 
 #Contenedor
-call(['sudo', 'docker', 'build', '-t', '34/product-page', '.'])
-os.system('sudo docker run -it --name 34-productpage -p 9080:9080 --env GROUP_NUMBER=34 34/product-page')
+#call(['sudo', 'docker', 'build', '-t', '34/product-page', '.'])
+#os.system('sudo docker run -it --name 34-productpage -p 9080:9080 --env GROUP_NUMBER=34 34/product-page')
