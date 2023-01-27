@@ -13,9 +13,9 @@ RUN python3 parte2.py
 
 EXPOSE 9080
 
-WORKDIR practica_creativa2/bookinfo/src/productpage
-CMD python3 productpage_monolith.py 9080
-
+#WORKDIR practica_creativa2/bookinfo/src/productpage
+#CMD python3 productpage_monolith.py 9080
+CMD ["python3", "./practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", "9080"]
 
 
 
