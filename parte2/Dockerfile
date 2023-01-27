@@ -1,6 +1,6 @@
 FROM python:3.9.2
 
-ENV GROUP_NUMBER 34
+ENV GROUP_NUMBER=34
 
 RUN apt-get update
 RUN apt-get install git
