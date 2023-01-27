@@ -1,32 +1,29 @@
-#!/usr/bin/python3
-
-import os, sys, subprocess
+#! /usr/bin/python
 from subprocess import call
+import sys
+import os
 
-#Funcion arch para reemplazar dentro de un archivo
-def arch(fi, rep1, rep2):
-	fin = open('./practica_creativa2/bookinfo/src/productpage/' + fi, 'r')
+#Variable del entorno group number
+os.environ['GROUP_NUMBER'] = '34'
 
-	with fin as file:
-		x= file.read()
-	fin.close()
+#Modificamos requirement.txt
+fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
+fin.write("urllib3\n chardet\n gevent\n greenlet")
+fin.close()
+#Instalamos requirements.txt
+os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
+call(['pip3', 'install', '-r', 'requirements.txt'])
 
-	fin = open('./practica_creativa2/bookinfo/src/productpage/' + fi, 'w')
-	with fin as file:
-		x= x.replace(rep1, rep2)
-		fin.write(x)
-	fin.close()
+#Titulo de la aplicación es el nombre del grupo (productpage.html)
+call(['mv', '-f', 'templates/productpage.html', 'templates/in.html'])
+fin = open('templates/in.html', 'r')
+fout = open('templates/productpage.html', 'w')
+for line in fin:
+	if "{% block title %}Simple Bookstore App{% endblock %}" in line :
+		fout.write("{% block title %}GRUPO: "+ os.environ['GROUP_NUMBER'] + "{% endblock %}")
+	else:
+		fout.write(line)
+fin.close()
+fout.close()
+call(['rm', '-f', 'templates/in.html'])
 
-#Modificamos el fichero requirements.txt
-arch('requirements.txt', 'urllib3==1.26.5', 'urllib3')
-arch('requirements.txt', 'chardet==3.0.4', 'chardet')
-arch('requirements.txt', 'gevent==1.4.0', 'gevent')
-arch('requirements.txt', 'greenlet==0.4.15', 'greenlet')
-#Instalamos pip sudo apt-get install python-pip
-subprocess.run(["apt-get", "install", "python3-pip"])
-#Instalamos dependencias de requirements.txt con pip
-subprocess.run(["pip3", "install", '-r', './practica_creativa2/bookinfo/src/productpage/requirements.txt'])
-
-#Capturamos la variable GROUP_NUMBER definida en el Dockerfile
-title = os.environ.get('GROUP_NUMBER')
-arch('templates/productpage.html', 'Simple Bookstore App', title)
