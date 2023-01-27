@@ -46,6 +46,6 @@ call(['rm', '-f', 'templates/in.html'])
 
 
 #Ejecutamos la aplicación en el puerto correspondiente
-call(['python3', 'productpage_monolith.py', '8080'])
+call(['python3', 'productpage_monolith.py', '9080'])
 
 
