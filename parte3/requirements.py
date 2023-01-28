@@ -19,5 +19,5 @@ with fin as file:
 	fin.write(nueva)
 fin.close()
 #Instalamos requirements.txt
- os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
- call(['pip3', 'install', '-r', 'requirements.txt'])
+os.chdir('practica_creativa2/bookinfo/src/productpage') #cd
+call(['pip3', 'install', '-r', 'requirements.txt'])
