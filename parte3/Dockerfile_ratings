@@ -6,12 +6,12 @@ COPY practica_creativa2/bookinfo/src/ratings/ratings.js /opt/microservicios
 ARG service_version
 ENV SERVICE_VERSION v1
 
+WORKDIR /opt/microservices/
 #instalar dependencias
 RUN npm install
 
 EXPOSE 9080
 
-WORKDIR /opt/microservices/
 CMD ["node", "ratings.js", "9080"]
 
 
