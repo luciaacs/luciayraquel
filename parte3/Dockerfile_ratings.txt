@@ -1,1 +1,18 @@
+FROM node: 12.18.1-slim
+
+COPY package.json /opt/microservicios
+COPY ratings.js /opt/microservicios
+
+ARG service_version
+ENV SERVICE_VERSION v1
+
+#instalar dependencias
+RUN npm install
+
+EXPOSE 9080
+
+WORKDIR /opt/microservices/
+
+CMD ["node", "ratings.js", "9080"]
+
 
