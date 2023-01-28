@@ -14,4 +14,4 @@ RUN python3 requirements.py
 
 EXPOSE 9080
 
-CMD ["python3", "./practica_creativaa2/bookinfo/src/productpage/productpage.py", "9080"]
+CMD ["python3", "./practica_creativa2/bookinfo/src/productpage/productpage.py", "9080"]
