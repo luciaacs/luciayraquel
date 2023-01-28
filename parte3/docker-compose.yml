@@ -1,6 +1,15 @@
 version: '3.0'
 
 services:
+  productpage:
+    build: ./dockerfile_productpage
+    container_name: 34-productpage
+    image: 34/productpage
+    port:
+      - "9080:9080"
+    environment:
+      - GROUP_NUMBER=34
+    
   details:
     build: ./dockerfile_details
     container_name: 34-details
@@ -10,18 +19,10 @@ services:
     environment:
       - SERVICE_VERSION=v3
       - ENABLE_EXTERNAL_BOOK_SERVICE=true
-    
-  productpage:
-    build: ./dockerfile_productpage
-    container_name: 34-productpage
-    image: 34/productpage
-    port:
-      - "9080:9080"
-    environment:
-      - GROUP_NUMBER=34
-      
+     
   reviews:
-    build: #???
+    build:
+        context: practica_creativa2/bookinfo/src/reviews/reviews-wlpcfg
     container_name: 34-reviews
     image: 34/reviews
     port:
