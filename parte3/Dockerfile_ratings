@@ -3,8 +3,8 @@ FROM node:12.18.1-slim
 COPY practica_creativa2/bookinfo/src/ratings/package.json /opt/microservices
 COPY practica_creativa2/bookinfo/src/ratings/ratings.js /opt/microservices
 
-ARG service_version
-ENV SERVICE_VERSION v1
+
+ENV SERVICE_VERSION=v1
 
 WORKDIR /opt/microservices/
 #instalar dependencias
