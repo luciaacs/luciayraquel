@@ -1,7 +1,7 @@
 FROM node:12.18.1-slim
 
-COPY practica_creativa2/bookinfo/src/ratings/package.json /opt/microservicios
-COPY practica_creativa2/bookinfo/src/ratings/ratings.js /opt/microservicios
+COPY practica_creativa2/bookinfo/src/ratings/package.json /opt/microservices
+COPY practica_creativa2/bookinfo/src/ratings/ratings.js /opt/microservices
 
 ARG service_version
 ENV SERVICE_VERSION v1
