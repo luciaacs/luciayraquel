@@ -1,4 +1,4 @@
-FROM node: 12.18.1-slim
+FROM node:12.18.1-slim
 
 COPY practica_creativa2/bookinfo/src/ratings/package.json /opt/microservicios
 COPY practica_creativa2/bookinfo/src/ratings/ratings.js /opt/microservicios
