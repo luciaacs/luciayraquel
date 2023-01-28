@@ -1,0 +1,38 @@
+
+
+services:
+  details:
+    build: ./dockerfile_details
+    container_name: 34-details
+    image: 34/details
+    port:
+      - "9080"
+    environment:
+      #???
+    
+  productpage:
+    build: ./dockerfile_productpage
+    container_name: 34-productpage
+    image: 34/productpage
+    port:
+      - "9080:9080"
+    environment:
+      - GROUP_NUMBER=34
+      
+  reviews:
+    build: #???
+    container_name: 34-reviews
+    image: 34/reviews
+    port:
+      - "9080"
+    environment:
+      - #???
+  ratings:
+    build: ./dockerfile_ratings
+    container_name: 34-ratings
+    image: 34/ratings
+    port:
+      - "9080"
+    environment:
+      - #??
+  
