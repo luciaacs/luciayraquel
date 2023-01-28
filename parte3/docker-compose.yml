@@ -7,7 +7,7 @@ services:
       dockerfile: dockerfile_productpage
     container_name: 34-productpage
     image: 34/productpage
-    port:
+    ports:
       - "9080:9080"
     environment:
       - GROUP_NUMBER=34
@@ -18,7 +18,7 @@ services:
       dockerfile: dockerfile_details
     container_name: 34-details
     image: 34/details
-    port:
+    ports:
       - "9080"
     environment:
       - SERVICE_VERSION=v3
@@ -29,7 +29,7 @@ services:
         context: practica_creativa2/bookinfo/src/reviews/reviews-wlpcfg
     container_name: 34-reviews
     image: 34/reviews
-    port:
+    ports:
       - "9080"
     environment:
       - ENABLE_RATINGS=true
@@ -42,7 +42,7 @@ services:
       dockerfile: dockerfile_ratings
     container_name: 34-ratings
     image: 34/ratings
-    port:
+    ports:
       - "9080"
     environment:
       - SERVICE_VERSION=v3
