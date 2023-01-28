@@ -2,7 +2,9 @@ version: '3.0'
 
 services:
   productpage:
-    build: ./dockerfile_productpage
+    build: 
+      context: .
+      dockerfile: dockerfile_productpage
     container_name: 34-productpage
     image: 34/productpage
     port:
@@ -11,7 +13,9 @@ services:
       - GROUP_NUMBER=34
     
   details:
-    build: ./dockerfile_details
+    build: 
+      context: .
+      dockerfile: dockerfile_details
     container_name: 34-details
     image: 34/details
     port:
@@ -33,7 +37,9 @@ services:
       - STAR_COLOR=red
       
   ratings:
-    build: ./dockerfile_ratings
+    build: 
+      context: .
+      dockerfile: dockerfile_ratings
     container_name: 34-ratings
     image: 34/ratings
     port:
