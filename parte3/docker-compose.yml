@@ -4,7 +4,7 @@ services:
   productpage:
     build: 
       context: .
-      dockerfile: dockerfile_productpage
+      dockerfile: Dockerfile_productpage
     container_name: 34-productpage
     image: 34/productpage
     ports:
@@ -15,7 +15,7 @@ services:
   details:
     build: 
       context: .
-      dockerfile: dockerfile_details
+      dockerfile: Dockerfile_details
     container_name: 34-details
     image: 34/details
     ports:
@@ -39,7 +39,7 @@ services:
   ratings:
     build: 
       context: .
-      dockerfile: dockerfile_ratings
+      dockerfile: Dockerfile_ratings
     container_name: 34-ratings
     image: 34/ratings
     ports:
