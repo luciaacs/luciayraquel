@@ -1,0 +1,44 @@
+##################################################################################################
+# Productpage service
+##################################################################################################
+apiVersion: v1
+kind: Service
+metadata:
+  name: productpage
+  labels:
+    app: productpage
+    service: productpage
+spec:
+  ports:
+  - port: 9080
+    name: http
+  selector:
+    app: productpage
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productpage
+  labels:
+    app: productpage
+    #version: 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productpage
+      #version: 
+  template:
+    metadata:
+      labels:
+        app: productpage
+        #version: 
+    spec:
+      containers:
+      - name: ratings
+        image: 34/ratings
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9080
+        securityContext:
+          runAsUser: 1000
