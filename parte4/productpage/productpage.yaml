@@ -35,8 +35,8 @@ spec:
         #version: 
     spec:
       containers:
-      - name: ratings
-        image: 34/ratings
+      - name: productpage
+        image: 34/productpage
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
