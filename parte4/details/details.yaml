@@ -21,7 +21,7 @@ metadata:
   name: details-v1
   labels:
     app: details
-    #version: 
+    version: v1
 spec:
   replicas: 1
   selector:
@@ -32,7 +32,7 @@ spec:
     metadata:
       labels:
         app: details
-        #version: 
+        version: v1
     spec:
       containers:
       - name: details
