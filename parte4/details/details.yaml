@@ -27,7 +27,7 @@ spec:
   selector:
     matchLabels:
       app: details
-      #version: 
+      version: v1
   template:
     metadata:
       labels:
@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: details
-        image: 34/details
+        image: luciaacs/34-details:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
