@@ -1,10 +1,10 @@
 # Practica Creativa 2 CDPS
-Para empezar sera necesario sopiar el link de acceso a este repositorio de codigo:
+Para empezar sera necesario copiar el link de acceso a este repositorio de código:
 ```
 git clone "https://github.com/luciaacs/luciayraquel.git"
 cd luciayraquel
 ```
-Dentro encontraremos diferentes carpetas que pertenecen a cada una de las partes del proyecto
+Dentro encontraremos diferentes carpetas que pertenecen a cada una de las partes del proyecto.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 PARTE 1: Despliegue de la aplicación en máquina virtual pesada
@@ -19,7 +19,7 @@ cd parte1
 python3 parte1.py
 
 ```
-Accedemos a la aplicación con http://Ip_maquina_vitual:9080/productpage
+Accedemos a la aplicación con http://Ip_maquina_vitual:9080/productpage.
 ![Captura de pantalla (172)](https://user-images.githubusercontent.com/106026951/215514953-ec51ee02-ef5e-4e46-9106-d9480f4fbdc0.png)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -42,15 +42,15 @@ PARTE 3: Segmentación de una aplicación monolítica en microservicios utilizan
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 La tercera parte descompone la aplicación en cuatro microservicios con el uso de dockercompose. Para poder ser ejecutada hacen falta los siguientes ficheros:
 - Un Docker file por cada servicio, excepto reviews, cuyo contenedor se crea llamando al script de python parte3.py.
-- El docker-compose.yaml donde declaramos los cuatro microservicios
-- Script parte3.py
+- El docker-compose.yaml donde declaramos los cuatro microservicios.
+- Script parte3.py.
 - Script requirements.py, se ejecuta por el Docker-productpages para modificar el fichero requirements.txt.
 
 ```
 cd parte3
 python3 parte3.py
 ```
-Creamos los contenedores restantes y ejecutamos a mano
+Creamos los contenedores restantes y ejecutamos a mano.
 ```
 sudo docker-compose build
 sudo docker-compose up
