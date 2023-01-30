@@ -4,39 +4,39 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: productpage
+  name: product-page
   labels:
-    app: productpage
-    service: productpage
+    app: product-page
+    service: product-page
 spec:
   ports:
   - port: 9080
     name: http
   selector:
-    app: productpage
+    app: product-page
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: productpage
+  name: product-page
   labels:
-    app: productpage
+    app: product-page
     #version: 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: productpage
+      app: product-page
       #version: 
   template:
     metadata:
       labels:
-        app: productpage
+        app: product-page
         #version: 
     spec:
       containers:
-      - name: productpage
-        image: 34/productpage
+      - name: product-page
+        image: 34/product-page
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
