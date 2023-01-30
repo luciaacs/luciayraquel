@@ -41,7 +41,7 @@ PARTE 3: Segmentación de una aplicación monolítica en microservicios utilizan
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 ```
 cd parte3
-python3 parte2.py
+python3 parte3.py
 ```
 En esta carpeta tenemos definidos cada uno de los Dockerfile necesarios para ejecutar cada uno de los servicios,incluyendo el docker-compose.yml
 El contenedor del servicio de reviews se crea llamando al script de python
@@ -58,7 +58,13 @@ sudo docker-compose up
 ![Captura de pantalla (171)](https://user-images.githubusercontent.com/106026951/215477181-f1c24ddf-dd3a-4872-9a7d-e9ddd4ef7243.png)
 
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PARTE 4: Segmentación de una aplicación monolítica en microservicios utilizando dockercompose
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+```
+cd parte4
+python3 parte4.py
+```
 
 
 
