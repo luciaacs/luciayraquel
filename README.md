@@ -13,10 +13,10 @@ PARTE 1: Despliegue de la aplicación en máquina virtual pesada
 cd parte1
 ```
 
-Lo unico que tendremos que hacer es ejecutar el archivo python en nuestro ordenador donde:
+La primera parte consta de un script de python a ejecutar, este incluye: 
 - Instalaremos las dependencias necesarias del archivo requirements.txt.
-- Modificaremos la pagina productpage.html para poner de titulo el numero de nuestro grupo: 34
-- Asignaremos el puerto 9080 como puerto externo para acceder a la pagina desde el exterior
+- Modificaremos la pagina productpage.html para poner de titulo el numero de nuestro grupo; 34.
+- Ejecutar la aplicación asignando el puerto 9080.
 
 ```
 python3 parte1.py
@@ -32,9 +32,9 @@ cd parte2
 sudo docker build -t 34-product-page .
 sudo docker run -p 9080:9080 34-product-page
 ```
-Dentro de esta carpeta encontramos el fichero Dockerfile donde hemos definido:
-- La aplicación web se ejecutara en el puerto 9080.
-- El script de python donde instalamos las dependecias necesarias.
+La carpeta correspondiente a la segunda parte incluye:
+- El fichero Dockerfile donde hemos definido el puerto 9080 para la ejecución de la aplicación web, ejecución del script de python parte2.py y ejecución de la aplicación.
+- El script de python, parte2.py, donde instalamos las dependecias necesarias.
 
 ![Captura de pantalla (185)](https://user-images.githubusercontent.com/106026951/215516853-8649932f-8e4a-4040-ba34-4dac7e68b315.png)
 
@@ -45,8 +45,11 @@ PARTE 3: Segmentación de una aplicación monolítica en microservicios utilizan
 cd parte3
 python3 parte3.py
 ```
-En esta carpeta tenemos definidos cada uno de los Dockerfile necesarios para ejecutar cada uno de los servicios,incluyendo el docker-compose.yml
-El contenedor del servicio de reviews se crea llamando al script de python
+Para la ejecucción de la tercera parte encontramos:
+- Un Docker file por cada servicio, excepto reviews, cuyo contenedor se crea llamando al script de python parte3.py.
+- - El docker-compose.yml
+- Script parte3.py
+- Script requirements.py, se ejecuta por el Docker-productpages para modificar el fichero requirements.txt.
 
 ```
 python3 parte3.py
