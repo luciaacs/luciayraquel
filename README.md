@@ -29,7 +29,8 @@ PARTE 2: Despliegue de una aplicación monolítica usando docker
 
 ```
 cd parte2
-python3 parte2.py
+sudo docker build -t 34-product-page .
+sudo docker run -p 9080:9080 34-product-page
 ```
 Dentro de esta carpeta encontramos el fichero Dockerfile donde hemos definido:
 - La aplicación web se ejecutara en el puerto 9080
