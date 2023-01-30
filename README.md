@@ -21,6 +21,7 @@ Lo unico que tendremos que hacer es ejecutar el archivo python en nuestro ordena
 ```
 python3 parte1.py
 ```
+![Captura de pantalla (172)](https://user-images.githubusercontent.com/106026951/215514953-ec51ee02-ef5e-4e46-9106-d9480f4fbdc0.png)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 PARTE 2: Despliegue de una aplicación monolítica usando docker
