@@ -28,6 +28,7 @@ PARTE 2: Despliegue de una aplicación monolítica usando docker
 En la segunda parte desplegamos una aplicación monolítica con el uso de contenedores Docker. Para realizar la ejecución necesitamos:
 - Un fichero Dockerfile donde definimos el puerto 9080 para la ejecución de la aplicación web, ejecución del script de python parte2.py y ejecución de la aplicación.
 - Un script de python, parte2.py, donde instalamos las dependecias necesarias.
+<img width="418" alt="Captura de Pantalla 2023-01-31 a las 0 11 55" src="https://user-images.githubusercontent.com/106026951/215617581-35a4a60d-4a04-4e84-9126-fbd71fec0550.png">
 
 ```
 cd parte2
@@ -45,6 +46,7 @@ La tercera parte descompone la aplicación en cuatro microservicios con el uso d
 - El docker-compose.yaml donde declaramos los cuatro microservicios.
 - Script parte3.py.
 - Script requirements.py, se ejecuta por el Docker-productpages para modificar el fichero requirements.txt.
+<img width="667" alt="Captura de Pantalla 2023-01-31 a las 0 12 19" src="https://user-images.githubusercontent.com/106026951/215617654-cdcfe645-c3a1-4fc1-8445-de3d156ce52d.png">
 
 ```
 cd parte3
