@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: ratings
-        image: 34/ratings
+        image: luciaacs/34-ratings:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
