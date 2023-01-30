@@ -59,7 +59,7 @@ sudo docker-compose up
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-PARTE 4: Segmentación de una aplicación monolítica en microservicios utilizando dockercompose
+PARTE 4: Despliegue de una aplicación basada en microservicios utilizando Kubernetes
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 ```
 cd parte4
