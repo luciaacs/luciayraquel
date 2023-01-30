@@ -47,7 +47,7 @@ python3 parte3.py
 ```
 Para la ejecucción de la tercera parte encontramos:
 - Un Docker file por cada servicio, excepto reviews, cuyo contenedor se crea llamando al script de python parte3.py.
-- - El docker-compose.yml
+- El docker-compose.yml
 - Script parte3.py
 - Script requirements.py, se ejecuta por el Docker-productpages para modificar el fichero requirements.txt.
 
