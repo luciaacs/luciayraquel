@@ -38,6 +38,8 @@ Dentro de esta carpeta encontramos el fichero Dockerfile donde hemos definido:
 - la imagen de docker: 34/productpage
 - el nombre del contenedor: 34-productpage
 
+![Captura de pantalla (185)](https://user-images.githubusercontent.com/106026951/215516853-8649932f-8e4a-4040-ba34-4dac7e68b315.png)
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 PARTE 3: Segmentación de una aplicación monolítica en microservicios utilizando dockercompose
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
