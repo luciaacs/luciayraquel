@@ -32,9 +32,9 @@ services:
     ports:
       - "9080"
     environment:
-      - ENABLE_RATINGS=false
-      - SERVICE_VERSION=v1
-      - STAR_COLOR=red
+      - ENABLE_RATINGS=true
+      - SERVICE_VERSION=v2
+      - STAR_COLOR=black
       
   ratings:
     build: 
