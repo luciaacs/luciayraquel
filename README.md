@@ -14,9 +14,9 @@ cd parte1
 ```
 
 Lo unico que tendremos que hacer es ejecutar el archivo python en nuestro ordenador donde:
-- instalaremos las dependencias necesarias del archivo requirements.txt
-- modificaremos la pagina productpage.html para poner de titulo el numero de nuestro grupo: 34
-- asignaremos el puerto 9080 como puerto externo para acceder a la pagina desde el exterior
+- Instalaremos las dependencias necesarias del archivo requirements.txt.
+- Modificaremos la pagina productpage.html para poner de titulo el numero de nuestro grupo: 34
+- Asignaremos el puerto 9080 como puerto externo para acceder a la pagina desde el exterior
 
 ```
 python3 parte1.py
@@ -33,10 +33,8 @@ sudo docker build -t 34-product-page .
 sudo docker run -p 9080:9080 34-product-page
 ```
 Dentro de esta carpeta encontramos el fichero Dockerfile donde hemos definido:
-- La aplicación web se ejecutara en el puerto 9080
-- el script de python donde instalamos las dependecias necesarias
-- la imagen de docker: 34/productpage
-- el nombre del contenedor: 34-productpage
+- La aplicación web se ejecutara en el puerto 9080.
+- El script de python donde instalamos las dependecias necesarias.
 
 ![Captura de pantalla (185)](https://user-images.githubusercontent.com/106026951/215516853-8649932f-8e4a-4040-ba34-4dac7e68b315.png)
 
