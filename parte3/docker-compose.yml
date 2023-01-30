@@ -33,7 +33,7 @@ services:
       - "9080"
     environment:
       - ENABLE_RATINGS=true
-      - SERVICE_VERSION=v3
+      - SERVICE_VERSION=v1
       - STAR_COLOR=red
       
   ratings:
