@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: reviews
-        image: 34/reviews-v2
+        image: luciaacs/34-reviews:v2
         imagePullPolicy: IfNotPresent
         env:
         - name: LOG_DIR
