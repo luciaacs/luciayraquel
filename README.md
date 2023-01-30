@@ -51,10 +51,7 @@ Para la ejecucción de la tercera parte encontramos:
 - Script parte3.py
 - Script requirements.py, se ejecuta por el Docker-productpages para modificar el fichero requirements.txt.
 
-```
-python3 parte3.py
-```
-Y el resto de contenedores los creamos y ejecutamos a mano
+Creamos los contenedores restantes y ejecutamos a mano
 
 ```
 sudo docker-compose build
