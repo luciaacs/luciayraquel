@@ -1,4 +1,4 @@
-# luciayraquel
+# Practica Creativa 2 CDPS
 Para empezar sera necesario sopiar el link de acceso a este repositorio de codigo:
 ```
 git clone "https://github.com/luciaacs/luciayraquel.git"
@@ -7,7 +7,7 @@ cd luciayraquel
 Dentro encontraremos diferentes carpetas que pertenecen a cada una de las partes del proyecto
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                                                   PARTE 1: Despliegue de la aplicación en máquina virtual pesada
+PARTE 1: Despliegue de la aplicación en máquina virtual pesada
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 ```
 cd parte1
@@ -23,7 +23,7 @@ python3 parte1.py
 ```
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                                                   PARTE 2: Despliegue de una aplicación monolítica usando docker
+PARTE 2: Despliegue de una aplicación monolítica usando docker
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
 ```
@@ -37,7 +37,7 @@ Dentro de esta carpeta encontramos el fichero Dockerfile donde hemos definido:
 - el nombre del contenedor: 34-productpage
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                                        PARTE 3: Segmentación de una aplicación monolítica en microservicios utilizando dockercompose
+PARTE 3: Segmentación de una aplicación monolítica en microservicios utilizando dockercompose
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 ```
 cd parte3
