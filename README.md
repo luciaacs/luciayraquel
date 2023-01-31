@@ -91,7 +91,7 @@ PREGUNTAS Y COMPARACIÓN
 - Maquina Virtual: La solución más simple. Al ser una aplicación monolítica no tiene buena fiabilidad y es más compleja de escalar, solo es posible escalabilidad horizontal. Además, escalar horizontalmente no solucionara la poca fiabilidad al tener un único punto de fallo.
 - Docker: Se trata de una solución también simple, pero más fiable que la anterior debido al uso de una imagen base fija. Sin embargo, la escalabilidad seguiría siendo horizontal, lo cual supone problemas parecidos.
 - Docker-compose: Una solución más compleja. Mucho más fiable debido al uso de microservicios, permitiendo así fallos sin que se caiga la aplicación al completo. Además, se podrían escalar individualmente los servicios que se requieran en función de la demanda.
-- Kubernetes: Tambíen es una solución compleja. El uso de pods incrementa la escalabilidad. Además, la divisióon en microservicios y utilizar redundancia de pods,permitiendo distribuir la carga, aporta fiabilidad. 
+- Kubernetes: También es una solución compleja. El uso de pods incrementa la escalabilidad. Además, la divisióon en microservicios y utilizar redundancia de pods,permitiendo distribuir la carga, aporta fiabilidad. 
 
 
 
