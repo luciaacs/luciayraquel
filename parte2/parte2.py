@@ -40,5 +40,4 @@ fin.close()
 fout.close()
 call(['rm', '-f', 'templates/in.html'])
 
-call(['sudo', 'docker', 'build', '-t', '34-product-page', '.'])
-os.system('sudo docker run -p 9080:9080 34-product-page')
+
