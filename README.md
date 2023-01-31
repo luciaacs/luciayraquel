@@ -56,20 +56,16 @@ La tercera parte descompone la aplicación en cuatro microservicios con el uso d
 <img width="667" alt="Captura de Pantalla 2023-01-31 a las 0 12 19" src="https://user-images.githubusercontent.com/106026951/215617654-cdcfe645-c3a1-4fc1-8445-de3d156ce52d.png">
 
 Para poder ser ejecutada hacen falta los siguientes ficheros:
-- Un Docker file por cada servicio, excepto reviews, cuyo contenedor se crea llamando al script de python parte3.py.
+- Un Docker file por cada servicio, excepto reviews, cuyo contenedor se crea directamente llamando al script de python parte3.py.
 - El docker-compose.yaml donde declaramos los cuatro microservicios.
-- Script parte3.py.
 - Script requirements.py, se ejecuta por el Docker-productpages para modificar el fichero requirements.txt.
+- Script parte3.py creamos los contenedores necesarios.
 
 ```
 cd parte3
 python3 parte3.py
 ```
-Creamos los contenedores restantes y ejecutamos a mano.
-```
-sudo docker-compose build
-sudo docker-compose up
-```
+
 ![Captura de pantalla (171)](https://user-images.githubusercontent.com/106026951/215477181-f1c24ddf-dd3a-4872-9a7d-e9ddd4ef7243.png)
 
 
