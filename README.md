@@ -67,12 +67,28 @@ sudo docker-compose up
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 PARTE 4: Despliegue de una aplicación basada en microservicios utilizando Kubernetes
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+En la última parte desplegamos la aplicación utilizando kubernetes. Para ello:
+- Subimos las imágenes creadas en el apartado anterior correspondientes a cada servicio a un repositorio de Docker hub.
+- Desplegamos ficheros (.yaml) individuales para cada microservicio. Con los servicios necesarios. 
+- Ejecutamos parte4.py creando un cluster de kubernetes en GKE con 5 nodos sin autoescalado, creando los objetos a partir de los ficheros .yaml 
+
 ```
 cd parte4
 python3 parte4.py
 ```
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PREGUNTAS Y COMPARACIÓN
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+**Incluya en la memoria de la práctica las diferencias con la versión de un único contenedor.**
 
 
+**Incluya en la memoria de la práctica las diferencias que encuentra al crear los pods, así mismo la diferencia que ve para escalar esta última solución.**
+
+**COMPARACIÓN**
+- Maquina Virtual: La solución más simple. Al ser una aplicación monolítica no tiene buena fiabilidad y es más compleja de escalar, solo es posible escalabilidad horizontal. Además, escalar horizontalmente no solucionara la poca fiabilidad al tener un único punto de fallo.
+- Docker: Se trata de una solución también simple, pero más fiable que la anterior debido al uso de una imagen base fija. Sin embargo, la escalabilidad seguiría siendo horizontal, lo cual supone problemas parecidos.
+- Docker-compose: Una solución más compleja. Mucho más fiable debido al uso de microservicios, permitiendo así fallos sin que se caiga la aplicación al completo. Además, se podrían escalar individualmente los servicios que se requieran en función de la demanda.
+- Kubernetes: Tambíen es una solución compleja. El uso de pods incrementa la escalabilidad. Además, la divisióon en microservicios y utilizar redundancia de pods,permitiendo distribuir la carga, aporta fiabilidad. 
 
 
 
