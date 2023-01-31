@@ -4,7 +4,7 @@ import sys
 import os
 import subprocess
 
-os.system('git clone https://github.com/CDPS-ETSIT/practica_creativa2.git')
+os.system('sudo git clone https://github.com/CDPS-ETSIT/practica_creativa2.git')
 
 #Directorio .../reviews: compilar y empaquetar ficheros necesarios para crear contenedor reviews
 os.chdir('./practica_creativa2/bookinfo/src/reviews')
