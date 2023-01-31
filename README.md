@@ -30,9 +30,15 @@ En la segunda parte desplegamos una aplicación monolítica con el uso de conten
 
 <img width="418" alt="Captura de Pantalla 2023-01-31 a las 0 11 55" src="https://user-images.githubusercontent.com/106026951/215617581-35a4a60d-4a04-4e84-9126-fbd71fec0550.png">
 
-Para realizar la ejecución necesitamos:
+Los ficheros necesarios para ejecutar esta parte son:
 - Un fichero Dockerfile donde definimos el puerto 9080 para la ejecución de la aplicación web, ejecución del script de python parte2.py y ejecución de la aplicación.
 - Un script de python, parte2.py, donde instalamos las dependecias necesarias.
+
+Antes de la ejecución debemos asegurarnos de tener instalado docker, si no lo tenemos, ejecutamos:
+```
+apt-get update
+apt-get install docker.io
+```
 
 ```
 cd parte2
