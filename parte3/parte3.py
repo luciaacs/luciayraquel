@@ -11,6 +11,6 @@ os.chdir('./practica_creativa2/bookinfo/src/reviews')
 call(['sudo docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/project gradle:4.8.1 gradle clean build'], shell=True)
 
 #Creamos y ejecutamos contenedores
-#os.system('sudo docker-compose build')
-#os.system('sudo docker-compose up')
+os.system('sudo docker-compose build')
+os.system('sudo docker-compose up')
 
