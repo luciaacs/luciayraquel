@@ -6,7 +6,7 @@ import subprocess
 
 os.system('git clone https://github.com/CDPS-ETSIT/practica_creativa2.git')
 
-#Directorio .../reviews: ficheros necesarios para crear contenedor reviews
+#Directorio .../reviews: compilar y empaquetar ficheros necesarios para crear contenedor reviews
 os.chdir('./practica_creativa2/bookinfo/src/reviews')
 call(['sudo docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/project gradle:4.8.1 gradle clean build'], shell=True)
 
