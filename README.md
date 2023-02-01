@@ -1,7 +1,7 @@
 # Practica Creativa 2 CDPS
 Para empezar sera necesario copiar el link de acceso a este repositorio de código:
 ```
-git clone "https://github.com/luciaacs/luciayraquel.git"
+sudo git clone "https://github.com/luciaacs/luciayraquel.git"
 cd luciayraquel
 ```
 Dentro encontraremos diferentes carpetas que pertenecen a cada una de las partes del proyecto.
@@ -15,7 +15,7 @@ En la primera parte desplegamos una aplicación monolítica alojada en una máqu
 - Ejecutar la aplicación asignando el puerto 9080.
 ```
 cd parte1
-python3 parte1.py
+sudo python3 parte1.py
 ```
 
 Accedemos a la aplicación con http://Ip_maquina_vitual:9080/productpage.
@@ -31,8 +31,8 @@ En la segunda parte desplegamos una aplicación monolítica con el uso de conten
 
 Antes de la ejecución debemos asegurarnos de tener instalado docker, si no lo tenemos, ejecutamos:
 ```
-apt-get update
-apt-get install docker.io
+sudo apt-get update
+sudo apt-get install docker.io
 ```
 Para esta parte necesitamos:
 - Un fichero Dockerfile donde definimos el puerto 9080 para la ejecución de la aplicación web, ejecución del script de python parte2.py y ejecución de la aplicación.
@@ -56,8 +56,8 @@ La tercera parte descompone la aplicación en cuatro microservicios con el uso d
 
 Antes de la ejecución debemos asegurarnos de tener instalado docker-compose, si no lo tenemos, ejecutamos:
 ```
-apt-get update
-apt-get install docker-compose
+sudo apt-get update
+sudo apt-get install docker-compose
 ```
 
 La ejecución de la parte 3 requiere:
