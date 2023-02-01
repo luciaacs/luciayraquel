@@ -7,7 +7,7 @@ RUN apt-get install git
 #RUN apt-get install python3-pip
 RUN git clone https://github.com/CDPS-ETSIT/practica_creativa2.git
 
-#Dentro de parte2 instalamos requirements, modificamos productpage.html
+#Dentro de parte2.py instalamos requirements
 COPY parte2.py .
 RUN python3 parte2.py
 
