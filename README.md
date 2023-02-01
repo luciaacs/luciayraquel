@@ -74,8 +74,15 @@ PARTE 4: Despliegue de una aplicación basada en microservicios utilizando Kuber
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 En la última parte desplegamos la aplicación utilizando kubernetes. Para ello:
 - Subimos las imágenes creadas en el apartado anterior correspondientes a cada servicio a un repositorio de Docker hub.
-- Desplegamos ficheros (.yaml) individuales para cada microservicio. Con los servicios necesarios. 
-- Ejecutamos parte4.py creando un cluster de kubernetes en GKE con 5 nodos sin autoescalado, creando los objetos a partir de los ficheros .yaml 
+```
+docker login
+sudo docker tag nombreImagen luciaacs/34-servicio:version
+sudo docker push luciaacs/34-servicio:version
+```
+- Creamos ficheros (.yaml) individuales para cada microservicio, en el caso de reviews, al tener tres versiones, creamos tres deployments.yamls distintos.
+- Ejecutamos crear.py creando un cluster de kubernetes en GKE con 5 nodos sin autoescalado.
+- Conectamos el cluster.
+- Ejecutamos inciar.py creando los servicios y deployments a partir de los ficheros .yaml.
 
 ```
 cd parte4
