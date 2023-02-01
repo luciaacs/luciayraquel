@@ -19,6 +19,7 @@ cd parte1
 python3 parte1.py
 
 ```
+
 Accedemos a la aplicación con http://Ip_maquina_vitual:9080/productpage.
 
 ![Captura de pantalla (172)](https://user-images.githubusercontent.com/106026951/215514953-ec51ee02-ef5e-4e46-9106-d9480f4fbdc0.png)
