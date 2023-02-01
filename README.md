@@ -44,6 +44,7 @@ Para esta parte necesitamos:
   sudo docker build -t 34-product-page .
   sudo docker run -p 9080:9080 34-product-page
   ```
+  
 Accedemos a la aplicación con http://Ip_maquina_vitual:9080/productpage.
 
 ![Captura de pantalla (185)](https://user-images.githubusercontent.com/106026951/215516853-8649932f-8e4a-4040-ba34-4dac7e68b315.png)
@@ -99,6 +100,7 @@ En la última parte desplegamos la aplicación utilizando kubernetes. Para ello:
   ```
   
 Accedemos a la aplicación con http://servicio-productpage_EXTERNAL_IP:9080/productpage.
+
 <img width="1176" alt="Captura de Pantalla 2023-02-01 a las 2 41 44" src="https://user-images.githubusercontent.com/106026951/215924264-49850ca6-9405-4665-a83c-69c596365fc1.png">
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
