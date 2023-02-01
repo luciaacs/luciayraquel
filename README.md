@@ -30,21 +30,19 @@ En la segunda parte desplegamos una aplicación monolítica con el uso de conten
 
 <img width="418" alt="Captura de Pantalla 2023-01-31 a las 0 11 55" src="https://user-images.githubusercontent.com/106026951/215617581-35a4a60d-4a04-4e84-9126-fbd71fec0550.png">
 
-Los ficheros necesarios para ejecutar esta parte son:
-- Un fichero Dockerfile donde definimos el puerto 9080 para la ejecución de la aplicación web, ejecución del script de python parte2.py y ejecución de la aplicación.
-- Un script de python, parte2.py, donde instalamos las dependecias necesarias.
-
 Antes de la ejecución debemos asegurarnos de tener instalado docker, si no lo tenemos, ejecutamos:
 ```
 apt-get update
 apt-get install docker.io
 ```
-
-```
-cd parte2
-sudo docker build -t 34-product-page .
-sudo docker run -p 9080:9080 34-product-page
-```
+Para esta parte necesitamos:
+- Un fichero Dockerfile donde definimos el puerto 9080 para la ejecución de la aplicación web, ejecución del script de python parte2.py y ejecución de la aplicación.
+- Ejecutar un script de python, parte2.py, donde instalamos las dependecias necesarias.
+  ```
+  cd parte2
+  sudo docker build -t 34-product-page .
+  sudo docker run -p 9080:9080 34-product-page
+  ```
 Accedemos a la aplicación con http://Ip_maquina_vitual:9080/productpage.
 
 ![Captura de pantalla (185)](https://user-images.githubusercontent.com/106026951/215516853-8649932f-8e4a-4040-ba34-4dac7e68b315.png)
@@ -56,16 +54,15 @@ La tercera parte descompone la aplicación en cuatro microservicios con el uso d
 
 <img width="667" alt="Captura de Pantalla 2023-01-31 a las 0 12 19" src="https://user-images.githubusercontent.com/106026951/215617654-cdcfe645-c3a1-4fc1-8445-de3d156ce52d.png">
 
-Para poder ser ejecutada hacen falta los siguientes ficheros:
+Laa ejecución de la parte 3 requiere:
 - Un Docker file por cada servicio, excepto reviews, cuyo contenedor se crea directamente llamando al script de python parte3.py.
 - El docker-compose.yaml donde declaramos los cuatro microservicios.
-- Script requirements.py, se ejecuta por el Docker-productpages para modificar el fichero requirements.txt.
-- Script parte3.py donde creamos los contenedores necesarios.
-
-```
-cd parte3
-python3 parte3.py
-```
+- Un script requirements.py que se ejecuta por el Docker-productpages para modificar el fichero requirements.txt.
+- Ejecutar el script parte3.py donde creamos los contenedores necesarios.
+  ```
+  cd parte3
+  python3 parte3.py
+  ```
 
 Accedemos a la aplicación con http://Ip_maquina_vitual:9080/productpage.
 
@@ -85,15 +82,16 @@ En la última parte desplegamos la aplicación utilizando kubernetes. Para ello:
 - Creamos ficheros (.yaml) individuales para cada microservicio, en el caso de reviews, al tener tres versiones, creamos tres deployments.yamls distintos.
 - Creamos un cluster de kubernetes en GKE con 5 nodos sin autoescalado.
 - Ejecutamos inciar.py creando los servicios y deployments a partir de los ficheros .yaml.
-```
-cd parte4
-python3 iniciar.py
-```
-Comprobamos con los siguientes comandos:
-```
-kubectl get services
-kubectl get deployments
-```
+  ```
+  cd parte4
+  python3 iniciar.py
+  ```
+- Comprobamos con los siguientes comandos:
+  ```
+  kubectl get services
+  kubectl get deployments
+  ```
+  
 Accedemos a la aplicación con http://servicio-productpage_EXTERNAL_IP:9080/productpage.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
