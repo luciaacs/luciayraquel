@@ -54,7 +54,13 @@ La tercera parte descompone la aplicación en cuatro microservicios con el uso d
 
 <img width="667" alt="Captura de Pantalla 2023-01-31 a las 0 12 19" src="https://user-images.githubusercontent.com/106026951/215617654-cdcfe645-c3a1-4fc1-8445-de3d156ce52d.png">
 
-Laa ejecución de la parte 3 requiere:
+Antes de la ejecución debemos asegurarnos de tener instalado docker-compose, si no lo tenemos, ejecutamos:
+```
+apt-get update
+apt-get install docker-compose
+```
+
+La ejecución de la parte 3 requiere:
 - Un Docker file por cada servicio, excepto reviews (que ya existe).
 - El docker-compose.yaml donde declaramos los cuatro microservicios.
 - Un script requirements.py que se ejecuta por el Docker-productpages para modificar el fichero requirements.txt.
