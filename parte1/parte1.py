@@ -10,7 +10,7 @@ import os
 call(['sudo', 'apt-get', 'update'])
 call(['sudo', 'apt-get', 'install', 'git'])
 call(['sudo', 'apt-get', 'install', 'python3-pip'])
-call(['git', 'clone', 'https://github.com/CDPS-ETSIT/practica_creativa2.git']) 
+call(['sudo', 'git', 'clone', 'https://github.com/CDPS-ETSIT/practica_creativa2.git']) 
 
 #Variable del entorno group number
 os.environ['GROUP_NUMBER'] = '34'
