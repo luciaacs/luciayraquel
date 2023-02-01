@@ -59,7 +59,7 @@ Para poder ser ejecutada hacen falta los siguientes ficheros:
 - Un Docker file por cada servicio, excepto reviews, cuyo contenedor se crea directamente llamando al script de python parte3.py.
 - El docker-compose.yaml donde declaramos los cuatro microservicios.
 - Script requirements.py, se ejecuta por el Docker-productpages para modificar el fichero requirements.txt.
-- Script parte3.py creamos los contenedores necesarios.
+- Script parte3.py donde creamos los contenedores necesarios.
 
 ```
 cd parte3
@@ -74,19 +74,18 @@ PARTE 4: Despliegue de una aplicación basada en microservicios utilizando Kuber
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 En la última parte desplegamos la aplicación utilizando kubernetes. Para ello:
 - Subimos las imágenes creadas en el apartado anterior correspondientes a cada servicio a un repositorio de Docker hub.
-```
-docker login
-sudo docker tag nombreImagen luciaacs/34-servicio:version
-sudo docker push luciaacs/34-servicio:version
-```
+  ```
+  docker login
+  sudo docker tag nombreImagen luciaacs/34-servicio:version
+  sudo docker push luciaacs/34-servicio:version
+  ```
 - Creamos ficheros (.yaml) individuales para cada microservicio, en el caso de reviews, al tener tres versiones, creamos tres deployments.yamls distintos.
-- Ejecutamos crear.py creando un cluster de kubernetes en GKE con 5 nodos sin autoescalado.
-- Conectamos el cluster.
+- Creamos un cluster de kubernetes en GKE con 5 nodos sin autoescalado.
 - Ejecutamos inciar.py creando los servicios y deployments a partir de los ficheros .yaml.
 
 ```
 cd parte4
-python3 parte4.py
+python3 iniciar.py
 ```
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 PREGUNTAS Y COMPARACIÓN
@@ -108,7 +107,7 @@ Docker Compose permite escalar manualmente contenedores individuales. Kubernetes
 **COMPARACIÓN**
 - Maquina Virtual: La solución más simple. Al ser una aplicación monolítica no tiene buena fiabilidad y es más compleja de escalar, solo es posible escalabilidad horizontal. Además, escalar horizontalmente no solucionara la poca fiabilidad al tener un único punto de fallo.
 - Docker: Se trata de una solución también simple, pero más fiable que la anterior debido al uso de una imagen base fija. Sin embargo, la escalabilidad seguiría siendo horizontal, lo cual supone problemas parecidos.
-- Docker-compose: Una solución más compleja. Mucho más fiable debido al uso de microservicios, permitiendo así fallos sin que se caiga la aplicación al completo. Además, se podrían escalar individualmente los servicios que se requieran en función de la demanda.
+- Docker-compose: Es una solución más compleja. Mucho más fiable debido al uso de microservicios, permitiendo así fallos sin que se caiga la aplicación al completo. Además, se podrían escalar individualmente los servicios que se requieran en función de la demanda.
 - Kubernetes: También es una solución compleja. El uso de pods incrementa la escalabilidad. Además, la división en microservicios y utilizar redundancia de pods,permitiendo distribuir la carga, aporta fiabilidad. 
 
 
