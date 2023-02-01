@@ -109,7 +109,7 @@ PREGUNTAS Y COMPARACIÓN
 
 **Incluya en la memoria de la práctica las diferencias con la versión de un único contenedor.**
 
-Docker es una tecnología de contenedores que permite empaquetar y ejecutar aplicaciones en entornos aislados, aportando fiabilidad al no verse afectados por otros procesos. Se ejecuta con el comando "docker run" especificando las configuraciones en la línea de comandos. Por otro lado, Docker Compose se enfoca en la gestión y despliegue de aplicaciones compuestas por múltiples contenedores, son muy faciles de escalar mediante la creación de múltiples réplicas de contenedores balanceando la carga de trabajo. Además, está segunda opción proporciona una forma más fácil y clara de descibir la configuración y las relaciones entre contenedores con el archivo docker-compose.yml.
+Docker  permite empaquetar y ejecutar aplicaciones en entornos aislados, aportando fiabilidad al no verse afectados por otros procesos. Se ejecuta con el comando "docker run" especificando las configuraciones en la línea de comandos. Por otro lado, Docker Compose se enfoca en la gestión y despliegue de aplicaciones compuestas por múltiples contenedores, son muy faciles de escalar mediante la creación de múltiples réplicas de contenedores balanceando la carga de trabajo. Además, está segunda opción proporciona una forma más fácil y clara de descibir la configuración y las relaciones entre contenedores con el archivo docker-compose.yml.
 
 **Incluya en la memoria de la práctica las diferencias que encuentra al crear los pods, así mismo la diferencia que ve para escalar esta última solución.**
 
