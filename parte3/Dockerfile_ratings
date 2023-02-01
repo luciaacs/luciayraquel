@@ -6,10 +6,12 @@ EXPOSE 9080
 ARG service_version
 ENV SERVICE_VERSION=v1
 
+#Copiar ficheros en ruta /opt/microservices/
 COPY practica_creativa2/bookinfo/src/ratings/package.json /opt/microservices/
 COPY practica_creativa2/bookinfo/src/ratings/ratings.js /opt/microservices/
 
 WORKDIR /opt/microservices
+#Instalar las dependencias
 RUN npm install
 
 CMD node ratings.js 9080
