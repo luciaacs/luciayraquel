@@ -14,4 +14,4 @@ WORKDIR /opt/microservices
 #Instalar las dependencias
 RUN npm install
 
-CMD node ratings.js 9080
+CMD ["node", "ratings.js", "9080"]
