@@ -17,7 +17,6 @@ En la primera parte desplegamos una aplicación monolítica alojada en una máqu
 ```
 cd parte1
 python3 parte1.py
-
 ```
 
 Accedemos a la aplicación con http://Ip_maquina_vitual:9080/productpage.
