@@ -113,16 +113,15 @@ Docker  permite empaquetar y ejecutar aplicaciones en entornos aislados, aportan
 
 **Incluya en la memoria de la práctica las diferencias que encuentra al crear los pods, así mismo la diferencia que ve para escalar esta última solución.**
 
-Docker Compose es adecuado para pequeños proyectos de desarrollo y pruebas, pero puede tener limitaciones en entornos de producción a gran escala.
-Kubernetes, por otro lado, está diseñado para proporcionar alta disponibilidad y tolerancia a fallos en entornos de producción a gran escala.
+Docker Compose es adecuado para pequeños proyectos de desarrollo y pruebas, pero puede tener limitaciones en entornos de producción a gran escala. Kubernetes, por otro lado, está diseñado para proporcionar alta disponibilidad y tolerancia a fallos en entornos de producción a gran escala.
 
 Respecto a la escalabilidad, esta opción permite automatizar la escalabilidad de los recursos de los ccontenedores, a diferencia de Docker-compose, en el cual la escalabilidad se realiza de forma manual para cada contenedor individualmente.
 
 **COMPARACIÓN**
-- Maquina Virtual: La solución más simple. Al ser una aplicación monolítica no tiene buena fiabilidad y es más compleja de escalar, solo es posible escalabilidad horizontal. Además, escalar horizontalmente no solucionara la poca fiabilidad al tener un único punto de fallo.
-- Docker: Se trata de una solución también simple, pero más fiable que la anterior debido al uso de una imagen base fija. Sin embargo, la escalabilidad seguiría siendo horizontal, lo cual supone problemas parecidos.
-- Docker-compose: Es una solución más compleja. Mucho más fiable debido al uso de microservicios, permitiendo así fallos sin que se caiga la aplicación al completo. Además, se podrían escalar individualmente los servicios que se requieran en función de la demanda.
-- Kubernetes: También es una solución compleja. El uso de pods incrementa la escalabilidad. Además, la división en microservicios y utilizar redundancia de pods,permitiendo distribuir la carga, aporta fiabilidad. 
+- Maquina Virtual: La solución más simple. Al ser una aplicación monolítica no tiene buena fiabilidad y es más compleja de escalar, solo es posible escalabilidad horizontal creando máquinas virtuales adicionales. 
+- Docker: Se trata de una solución también simple, pero más fiable que la anterior debido al uso de una imagen base fija. Sin embargo, la escalabilidad seguiría siendo horizontal, lo cual supone problemas parecidos. Una solución sería dividir la aplicación en distintos servicios, tal y como se va a hacer a continucación.
+- Docker-compose: Es una solución más compleja. Mucho más fiable debido al uso de microservicios, permitiendo fallos en servicios individuales. Sigue siendo débil en escalabilidad ya que todos los servicios se deben escalar juntos. Para solucionar la escalabilidad, lo más sencillo sería utilizar orquestadores de kubernetes más potentes.
+- Kubernetes: Es la mejor solución y la más compleja en términos de configuración y mantenimiento. Altamente escalable debido al uso de pods, escalando servicios individualmente, y buena fiabilidad gracias a la distribución de recursos de manera eficiente. 
 
 
 
