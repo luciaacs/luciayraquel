@@ -32,7 +32,7 @@ with fin as file:
 	nueva=file.read()
 fin.close()
 
-fin = open('practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
+fin = open('./practica_creativa2/bookinfo/src/productpage/requirements.txt', 'w')
 with fin as file:
 	nueva=nueva.replace('urllib3==1.26.5', 'urllib3')
 	nueva=nueva.replace('chardet==3.0.4', 'chardet')
