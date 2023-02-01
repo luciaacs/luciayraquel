@@ -13,7 +13,6 @@ En la primera parte desplegamos una aplicación monolítica alojada en una máqu
 - Instalaremos las dependencias necesarias del archivo requirements.txt.
 - Modificaremos la pagina productpage.html para poner de titulo el numero de nuestro grupo; 34.
 - Ejecutar la aplicación asignando el puerto 9080.
-
 ```
 cd parte1
 python3 parte1.py
