@@ -80,7 +80,12 @@ En la última parte desplegamos la aplicación utilizando kubernetes. Para ello:
   sudo docker push luciaacs/34-servicio:version
   ```
 - Creamos ficheros (.yaml) individuales para cada microservicio, en el caso de reviews, al tener tres versiones, creamos tres deployments.yamls distintos.
-- Creamos un cluster de kubernetes en GKE con 5 nodos sin autoescalado.
+- Creamos un cluster de kubernetes en GKE con 5 nodos sin autoescalado. Se puede crear y conectar de forma manual o través de los siguientes comandos:
+  ```
+  gcloud projects list
+  gcloud config set project PROYECT_ID
+  python3 crear.py
+  ```
 - Ejecutamos inciar.py creando los servicios y deployments a partir de los ficheros .yaml.
   ```
   cd parte4
