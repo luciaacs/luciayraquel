@@ -3,6 +3,7 @@ FROM node:12.18.1-slim
 
 EXPOSE 9080
 
+ARG service_version
 ENV SERVICE_VERSION=v1
 
 COPY practica_creativa2/bookinfo/src/ratings/package.json /opt/microservices/
