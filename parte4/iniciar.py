@@ -3,6 +3,10 @@ import sys
 import os
 import subprocess
 
+os.system("kubectl delete --all deployments")
+os.system("kubectl delete --all services")
+os.system("kubectl delete --all pods")
+
 os.system("kubectl apply -f details.yaml")
 os.system("kubectl apply -f productpage.yaml")
 os.system("kubectl apply -f ratings.yaml")
