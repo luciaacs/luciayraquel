@@ -45,6 +45,7 @@ cd parte2
 sudo docker build -t 34-product-page .
 sudo docker run -p 9080:9080 34-product-page
 ```
+Accedemos a la aplicación con http://Ip_maquina_vitual:9080/productpage.
 
 ![Captura de pantalla (185)](https://user-images.githubusercontent.com/106026951/215516853-8649932f-8e4a-4040-ba34-4dac7e68b315.png)
 
@@ -66,6 +67,8 @@ cd parte3
 python3 parte3.py
 ```
 
+Accedemos a la aplicación con http://Ip_maquina_vitual:9080/productpage.
+
 ![Captura de pantalla (171)](https://user-images.githubusercontent.com/106026951/215477181-f1c24ddf-dd3a-4872-9a7d-e9ddd4ef7243.png)
 
 
@@ -82,11 +85,17 @@ En la última parte desplegamos la aplicación utilizando kubernetes. Para ello:
 - Creamos ficheros (.yaml) individuales para cada microservicio, en el caso de reviews, al tener tres versiones, creamos tres deployments.yamls distintos.
 - Creamos un cluster de kubernetes en GKE con 5 nodos sin autoescalado.
 - Ejecutamos inciar.py creando los servicios y deployments a partir de los ficheros .yaml.
-
 ```
 cd parte4
 python3 iniciar.py
 ```
+Comprobamos con los siguientes comandos:
+```
+kubectl get services
+kubectl get deployments
+```
+Accedemos a la aplicación con http://servicio-productpage_EXTERNAL_IP:9080/productpage.
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 PREGUNTAS Y COMPARACIÓN
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
@@ -101,8 +110,7 @@ Docker es una tecnología de contenedores que permite empaquetar y ejecutar apli
 Docker Compose es adecuado para pequeños proyectos de desarrollo y pruebas, pero puede tener limitaciones en entornos de producción a gran escala.
 Kubernetes, por otro lado, está diseñado para proporcionar alta disponibilidad y tolerancia a fallos en entornos de producción a gran escala.
 
-Docker Compose permite escalar manualmente contenedores individuales. Kubernetes, por otro lado, permite automatizar el escalamiento de los recursos de contenedores mediante la asignación de recursos y la gestión de la replicación. Además, Kubernetes permite escalar fácilmente a través de múltiples nodos y clústeres, lo que no es posible con Docker Compose.
-
+Respecto a la escalabilidad, esta opción permite automatizar la escalabilidad de los recursos de los ccontenedores, a diferencia de Docker-compose, en el cual la escalabilidad se realiza de forma manual para cada contenedor individualmente.
 
 **COMPARACIÓN**
 - Maquina Virtual: La solución más simple. Al ser una aplicación monolítica no tiene buena fiabilidad y es más compleja de escalar, solo es posible escalabilidad horizontal. Además, escalar horizontalmente no solucionara la poca fiabilidad al tener un único punto de fallo.
